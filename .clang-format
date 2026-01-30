@@ -1,0 +1,22 @@
+BasedOnStyle: LLVM
+Language: C
+
+# Tabs required for indentation
+UseTab: Always
+IndentWidth: 8
+TabWidth: 8
+ContinuationIndentWidth: 8
+
+# Keep includes simple; you’ll still want to compile with -I instead of hard paths
+SortIncludes: true
+
+# Switch/case rule: case labels NOT indented with a tab
+IndentCaseLabels: false
+# (clang-format will keep case labels aligned with switch; statements inside case will indent)
+
+# Reasonable brace + spacing defaults
+BreakBeforeBraces: Attach
+ColumnLimit: 100
+AllowShortFunctionsOnASingleLine: None
+SpacesInParentheses: false
+SpaceAfterCStyleCast: false

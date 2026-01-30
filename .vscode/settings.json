@@ -1,0 +1,26 @@
+{
+	// --- C/C++ tooling ---
+	"C_Cpp.default.cStandard": "c17",
+	"C_Cpp.intelliSenseEngine": "default",
+	// Use clang-format + clang-tidy (ships with LLVM; install via your OS package manager)
+	"C_Cpp.codeAnalysis.clangTidy.enabled": true,
+	"C_Cpp.codeAnalysis.clangTidy.useBuildPath": true,
+	"C_Cpp.codeAnalysis.runAutomatically": true,
+	// --- Format-on-save (clang-format) ---
+	"editor.formatOnSave": true,
+	"[c]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools",
+		"editor.formatOnSave": true
+	},
+	"[cpp]": {
+		"editor.defaultFormatter": "ms-vscode.cpptools",
+		"editor.formatOnSave": true
+	},
+	// Enforce tabs for indentation in the editor
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.tabSize": 2,
+	// Optional: show whitespace issues early
+	"files.trimTrailingWhitespace": true,
+	"editor.renderWhitespace": "boundary"
+}

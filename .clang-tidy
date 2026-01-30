@@ -1,0 +1,25 @@
+Checks: >
+  -*,
+  clang-analyzer-*,
+  bugprone-*,
+  readability-*,
+  portability-*,
+  misc-*,
+  cppcoreguidelines-avoid-non-const-global-variables,
+  readability-identifier-naming
+
+WarningsAsErrors: ''
+
+CheckOptions:
+  # Naming conventions aligned to your guide:
+  # - globals start with Capital
+  # - functions lowercase
+  # - locals start lowercase
+  # - macros/typedefs/enums ALLCAPS
+  - { key: readability-identifier-naming.GlobalVariableCase, value: CamelCase }
+  - { key: readability-identifier-naming.FunctionCase, value: lower_case }
+  - { key: readability-identifier-naming.LocalVariableCase, value: lower_case }
+  - { key: readability-identifier-naming.MacroDefinitionCase, value: UPPER_CASE }
+  - { key: readability-identifier-naming.TypedefCase, value: UPPER_CASE }
+  - { key: readability-identifier-naming.EnumCase, value: UPPER_CASE }
+  - { key: readability-identifier-naming.EnumConstantCase, value: UPPER_CASE }
