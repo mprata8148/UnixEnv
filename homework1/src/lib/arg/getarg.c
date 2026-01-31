@@ -15,7 +15,7 @@ int get_argument(int argc, char *argv[], double *return_value) {
 	char *endptr;
 	errno = 0;
 
-	if (argc < 1) {
+	if (argc <= 1) {
 		return -1;
 	}
 
