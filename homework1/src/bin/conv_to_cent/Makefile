@@ -15,10 +15,12 @@ all: $(TARGET)
 
 # LINK step (depends on object file AND the library)
 $(TARGET): $(OBJ) $(STATICLIBS) | $(OUTDIR)
+	echo "[Linking]: $(CC) $(OBJ) $(LDFLAGS) $(LDLIBS) -o $@"
 	$(CC) $(OBJ) $(LDFLAGS) $(LDLIBS) -o $@
 
 # COMPILE step (depends on source AND headers)
 $(OBJ): $(SRC) ../../../include/temp_conv.h ../../../include/getarg.h
+	echo "[Compiling]: $(CC) $(CFLAGS) -c $< -o $@"
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(OUTDIR):
